@@ -1,0 +1,51 @@
+    <!-- <div class="header-title text-center mt-5">
+        <h2 class="text-uppercase">{{product.title}}</h2>
+        <div class="title-border mt-3"></div>
+        <p class="title-desc text-muted mt-3">{{product.subtitle}}</p>
+    </div>
+    <div class="cbox-gallary1 mfp-image">
+        <div *ngIf="product.videoName && !playingVideo">
+                <button (click)="playVideo()" style="z-index: 10;" class="videoplay-icon text-white">
+                    <i class="mdi mdi-play play-icon-circle play play-icon f-30"></i>
+                </button>
+        </div>
+        <video *ngIf="product.videoName" (ended)="videoEnd()" style="display: none;" [ngClass]="{'playing': playingVideo == true}" #videoPlayer [src]="'assets/videos/' + product.videoName"></video>
+        <img [ngStyle]="{'display': playingVideo == true ? 'none' : 'block'}" [src]="product.photourl" class="item-container box-shadow-lg rounded" alt="">
+        
+    </div> -->
+    <div class="container">
+        <div class="row vertical-content">
+            <div class="col-lg-6 p-0">
+                <div class="skill-box bg-white p-4 rounded box-shadow">
+                    <div class="header-title text-center mt-5">
+                        <h2 class="text-uppercase">{{product.title}}</h2>
+                        <div class="title-border mt-3"></div>
+                        <p class="title-desc text-muted mt-3">{{product.subtitle}}</p>
+                    </div>
+                    <div class="skills mt-3" *ngIf="product.features">
+                        <p *ngFor="let feature of product.features" class="mb-1 text-muted">
+                            {{feature}}
+                        </p>
+                    </div>
+                          <!--  <div class="progress">
+                                <div class="progress-bar rounded" style="width:80%;">
+                                    <p class="progress-value f-15 font-weight-bold">80%</p>
+                                </div>
+                            </div>
+                        </div> -->
+
+                </div>
+
+            </div>
+            <div class="col-lg-6 p-0 about-img">
+                <div *ngIf="product.videoName && !playingVideo">
+                    <button (click)="playVideo()" style="z-index: 10;" class="videoplay-icon text-white">
+                        <i class="mdi mdi-play play-icon-circle play play-icon f-30"></i>
+                    </button>
+                </div>
+                <video muted oncanplay="this.muted=true" *ngIf="product.videoName" (ended)="videoEnd()" style="display: none;" [ngClass]="{'playing': playingVideo == true}" #videoPlayer [src]="'assets/videos/' + product.videoName"></video>
+                <img [ngStyle]="{'display': playingVideo == true ? 'none' : 'block'}" [src]="'https://i.picsum.photos/id/' + index + '/1000/800.jpg'" class="img-fluid rounded box-shadow" alt="">
+                <!-- <img [ngStyle]="{'display': playingVideo == true ? 'none' : 'block'}" [src]="product.photourl" class="img-fluid rounded box-shadow" alt=""> -->
+            </div>
+        </div>
+    </div>

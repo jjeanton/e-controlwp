@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "antares-page",
+      "public": "dist/antares-page",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+video {
+    width: 100%;
+    object-fit: cover;
+    transition: all 1.2s linear;
+}
+
+.playing {
+    display: block !important;
+}
+
+.watch-vid {
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+}
+
+.videoplay-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 66px;
+    width: 66px;
+    background-color: #ffffff;
+    line-height: 66px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.4s;
+    color: #0062cc !important;
+}
+.videoplay-icon:hover {
+    background-color: #0062cc;
+    color: #ffffff !important;
+}
+
+.skill-box {
+    min-height: 430px !important;
+}

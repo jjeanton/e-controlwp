@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "antares-b7c10": {
+      "hosting": {
+        "antares-page": [
+          "antares-b7c10"
+        ]
+      }
+    }
+  }
+}
